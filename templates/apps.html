@@ -1,0 +1,64 @@
+{% extends 'bootstrap/base.html' %}
+{%import "bootstrap/wtf.html" as wtf%}
+
+{% block title %}Profile{% endblock %}
+{% block styles %}
+{{ super() }}
+	<link rel="stylesheet" href="{{ url_for('static', filename='snipped.css') }}">
+{% endblock %}
+
+{% block content %}
+
+{% include "header.html" %}
+<body>
+<!--   duplicate-->
+<div class="col-lg-6 col-md-12">
+
+                            <div class="news-feed news-feed-stories" style="margin-top: 200px;">
+                                <div class="stories-title d-flex justify-content-between align-items-center">
+                                    <h3>Community Apps</h3>
+                                </div>
+
+                                <div class="row">
+
+                                    <div class="col-lg-2 col-sm-4 col-4">
+                                        <div class="stories-item">
+                                            <a href="#">
+                                                <img src="{{ url_for('static', filename='images/taxi.webp') }}">
+                                            </a>
+                                            <span><a href="#">Book Cabs</a></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-2 col-sm-4 col-4">
+                                        <div class="stories-item">
+                                            <a href="#">
+                                                <img src="{{ url_for('static', filename='images/event.jpeg') }}">
+                                            </a>
+                                            <span><a href="#">Events</a></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-sm-4 col-4">
+                                        <div class="stories-item">
+                                            <a href="#">
+                                                <img src="{{ url_for('static', filename='images/group.jpeg') }}">
+                                            </a>
+                                            <span><a href="#">Class group</a></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-sm-4 col-4">
+                                        <div class="stories-item">
+                                            <a href="#">
+                                                <img src="{{ url_for('static', filename='images/search.webp') }}">
+                                            </a>
+                                            <span><a href="#">Search</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+   </body>
+{% include "footer.html" %}
+
+{% endblock %}
