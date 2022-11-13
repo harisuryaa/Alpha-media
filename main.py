@@ -219,4 +219,4 @@ def logout():
     return redirect(url_for('search'))
 # host='10.20.35.36'
 if __name__ == "__main__":
-    app.run(host='172.20.10.3',port=5000)
+    app.run(port=5000)
